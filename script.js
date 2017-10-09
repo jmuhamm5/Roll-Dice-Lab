@@ -29,13 +29,13 @@ var diceArr = [];
 	}
 
 
-	document.getElementById('getDie').addEventListener('click',function(){
+	document.getElementById('getDice').addEventListener('click',function(){
 	    var d = new Dice();
 	    diceArr.push(d);
 	})
 
 
-	document.getElementById('rollDie').addEventListener('click', function(){
+	document.getElementById('rollDice').addEventListener('click', function(){
 	        for(var i = 0; i<diceArr.length;i++){
 	            diceArr[i].value = diceArr[i].roll();
 	            diceArr[i].div.innerText = diceArr[i].value;
@@ -43,7 +43,7 @@ var diceArr = [];
 	})
 
 
-	document.getElementById('sumDie').addEventListener('click', function(){
+	document.getElementById('sumDice').addEventListener('click', function(){
 	    var total = 0;
 	    for (var i=0;i<diceArr.length;i++){
 	        total+=diceArr[i].value;
