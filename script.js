@@ -10,12 +10,13 @@ var diceArr = [];
 	    this.div.addEventListener('click',function(){
 	        this.value = this.roll();
 	        this.div.innerText = this.value;
+					this.div.className = 'dice dice-'+this.value;
 	    }.bind(this));
 	    this.div.addEventListener('dblclick', function(){
 	        this.div.remove();
 	         var id = diceArr.indexOf(this);
 	        diceArr.splice(id,1);
-	    }.bind(this))
+	    }.bind(this));
 	}
 
 
