@@ -5,7 +5,7 @@ var diceArr = [];
 	    this.value = this.roll();
 	    this.div = document.createElement('div');
 	    this.div.innerText = this.value;
-	    this.div.className = 'dice';
+	    this.div.className = 'dice dice-'+this.value;
 	    document.getElementById('container').appendChild(this.div);
 	    this.div.addEventListener('click',function(){
 	        this.value = this.roll();
@@ -39,6 +39,7 @@ var diceArr = [];
 	        for(var i = 0; i<diceArr.length;i++){
 	            diceArr[i].value = diceArr[i].roll();
 	            diceArr[i].div.innerText = diceArr[i].value;
+							diceArr[i].div.className = 'dice dice-'+diceArr[i].value;
 	        }
 	})
 
